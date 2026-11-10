@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIN HACKER TEAM STORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-grid"></div>
+<header><div class="brand">🛡️ DIN HACKER TEAM <span>STORE</span></div><button id="logout" class="ghost hidden">লগআউট</button></header>
+<main>
+<section id="gate" class="panel gate">
+  <div class="orb">DHT</div><p class="eyebrow">SECURE DOWNLOAD PORTAL</p><h1>প্রবেশ করতে পাসওয়ার্ড দিন</h1>
+  <form id="gateForm"><input id="sharedPassword" type="password" placeholder="স্টোর পাসওয়ার্ড" autocomplete="current-password" required>
+  <button class="primary" type="submit">প্রবেশ করুন <span>→</span></button></form>
+  <p id="gateMessage" class="message"></p>
+</section>
+<section id="store" class="hidden">
+  <div class="hero"><p class="eyebrow">WELCOME TO THE VAULT</p><h1>অ্যাপস ও ফাইল <span>ডাউনলোড</span></h1><p>অ্যাডমিন কর্তৃক প্রকাশিত ফাইলগুলো এখান থেকে ডাউনলোড করুন।</p>
+  <input id="search" class="search" placeholder="ফাইল খুঁজুন…"></div>
+  <div id="fileGrid" class="file-grid"></div><p id="empty" class="message"></p>
+</section>
+</main>
+<footer>DIN HACKER TEAM STORE <span>•</span> Secure File Portal</footer>
+<script type="module" src="app.js"></script>
+</body></html>

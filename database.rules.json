@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "files": {
+      ".read": "auth != null && auth.token.storeAccess === true",
+      "$fileId": { ".write": "auth != null && auth.token.storeAdmin === true" }
+    },
+    "admins": { ".read": false, ".write": false }
+  }
+}

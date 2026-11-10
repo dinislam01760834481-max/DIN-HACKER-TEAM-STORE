@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — DIN HACKER TEAM STORE</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="bg-grid"></div><header><div class="brand">🛡️ DHT <span>ADMIN</span></div><a class="ghost" href="index.html">স্টোর দেখুন</a></header>
+<main>
+<section id="adminLogin" class="panel gate"><p class="eyebrow">ADMIN AUTHENTICATION</p><h1>অ্যাডমিন লগইন</h1>
+<form id="loginForm"><input id="email" type="email" placeholder="Admin email" required><input id="adminPass" type="password" placeholder="Password" required><button class="primary">লগইন করুন</button></form><p id="loginMsg" class="message"></p></section>
+<section id="adminPanel" class="hidden">
+<div class="hero"><p class="eyebrow">CONTROL CENTER</p><h1>ফাইল <span>ম্যানেজমেন্ট</span></h1><p>নতুন ফাইল যোগ করুন, আপডেট করুন বা মুছে ফেলুন।</p></div>
+<div class="panel"><h2>নতুন ফাইল আপলোড</h2><form id="uploadForm" class="upload-form">
+<input id="fileTitle" placeholder="ফাইল/অ্যাপের নাম" required>
+<input id="fileVersion" placeholder="ভার্সন (যেমন 1.0.0)">
+<input id="fileDesc" placeholder="সংক্ষিপ্ত বিবরণ">
+<input id="fileCategory" placeholder="ক্যাটাগরি (যেমন APK)">
+<input id="fileBlob" type="file" required>
+<button class="primary">আপলোড ও প্রকাশ</button></form><p id="uploadMsg" class="message"></p></div>
+<div class="panel"><h2>প্রকাশিত ফাইল</h2><div id="adminFiles" class="admin-list"></div></div>
+<div class="panel"><h2>স্টোর পাসওয়ার্ড পরিবর্তন</h2><p class="muted">এটি নিরাপদ Cloud Function secret-এ সংরক্ষিত হবে; এখানে বর্তমান পাসওয়ার্ড দেখানো হবে না।</p>
+<p class="muted">পাসওয়ার্ড পরিবর্তন করতে Firebase CLI-তে <code>firebase functions:secrets:set STORE_PASSWORD</code> চালিয়ে নতুন secret দিন এবং Functions redeploy করুন।</p></div>
+<button id="adminLogout" class="ghost">অ্যাডমিন লগআউট</button>
+</section></main><footer>Admin access is restricted by Firebase Authentication and database rules.</footer>
+<script type="module" src="admin.js"></script></body></html>

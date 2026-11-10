@@ -1,0 +1,9 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /downloads/{fileId}/{fileName} {
+      allow read: if request.auth != null && request.auth.token.storeAccess == true;
+      allow write, delete: if request.auth != null && request.auth.token.storeAdmin == true;
+    }
+  }
+}
